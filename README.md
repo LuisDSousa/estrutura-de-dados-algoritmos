@@ -1,2 +1,7 @@
-# estrutura-de-dados-algoritmos
-Código da disciplina de Estrutura de Dados e Algoritmos, 4° periodo.
+# 04-Sistemas-Banco-Dado
+Aulas da disciplina de Sistemas de Banco de Dados
+
+## Código do GitHub
+- git add .
+- git comit -m "Texto de commit"
+- git push origin main
