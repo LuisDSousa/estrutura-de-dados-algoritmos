@@ -42,13 +42,11 @@ public class Lista<T>{
             System.out.println("Dado: " +primeiroNo.getDado() + " removido");
 
             if (primeiroNo == ultimoNo ){
-                primeiroNo = primeiroNo.getNextNo();
-                ultimoNo = ultimoNo.getNextNo();
+                primeiroNo = null;
+                ultimoNo = null;
             }else{
                 primeiroNo = primeiroNo.getNextNo();
             }
-
-            primeiroNo = primeiroNo.getNextNo();
         }
     }
     public void removerFinal(){
