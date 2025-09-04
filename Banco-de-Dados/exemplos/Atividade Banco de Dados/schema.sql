@@ -1,0 +1,24 @@
+PRAGMA foreign_keys = ON;
+CREATE TABLE participante (
+id PRIMARY KEY INTEGER AUTOINCREMENT,
+nome TEXT NOT NULL,
+email TEXT NOT NULL UNIQUE,
+telefone TEXT
+);
+
+CREATE TABLE evento (
+id PRIMARY KEY INTEGER AUTOINCREMENT,
+nome TEXT NOT NULL,
+descricao TEXT,
+local TEXT NOT NULL,
+data TEXT NOT NULL,
+);
+
+CREATE TABLE pagamento(
+id PRIMARY KEY INTEGER AUTOINCREMENT,
+id_inscricao INTEGER NOT NULL UNIQUE,
+FOREIGN KEY (id_inscricao) REFERENCES inscricao(id),
+valor REAL,
+data_pagamento TEXT
+status TEXT
+):
