@@ -34,8 +34,4 @@ public class NoDuplo<T>{
     public void setIndice(int indice){
         this.indice = indice;
     }
-
-    
-
-
 }

@@ -1,4 +1,4 @@
-public class ListaDupla {
+public class ListaDupla<T> {
     private NoDuplo<T> primeiroNo;
     private NoDuplo<T> ultimoNo;
     private String nomeLista;
@@ -15,7 +15,7 @@ public class ListaDupla {
     }
 
     public void addInicio(T dado){
-        NoDuplo<T> novoNo = new NoDuplo<T>(dado);
+        NoDuplo<T> novoNo = new NoDuplo<T>(dado,0);
         if(primeiroNo == null){
             this.primeiroNo = novoNo;
             this.ultimoNo = novoNo;
@@ -28,7 +28,7 @@ public class ListaDupla {
         tamanho++;
     }
     public void addFinal(T dado){
-        NoDuplo<T> novoNo = new NoDuplo<T>(dado);
+        NoDuplo<T> novoNo = new NoDuplo<T>(dado,0);
         if(ultimoNo == null){
             this.primeiroNo = novoNo;
             this.ultimoNo = novoNo;
@@ -50,9 +50,18 @@ public class ListaDupla {
             indice++;
         }
     }
-
-
-
-
-
+    public void imprimeLista(){
+        if (primeiroNo == null){
+            System.out.println("Lista Vazia!");
+        }else{
+            System.out.println("Dados da Lista"+  nomeLista);
+            NoDuplo<T> aux = primeiroNo;
+            while (aux != null){
+                System.out.printf("%s", aux.toString());
+                aux = aux.getproximoNo();
+            }
+            System.out.println();
+        }  
+    }
+    
 }
