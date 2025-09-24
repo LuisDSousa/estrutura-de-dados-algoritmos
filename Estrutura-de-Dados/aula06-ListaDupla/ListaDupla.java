@@ -57,7 +57,7 @@ public class ListaDupla<T> {
             System.out.println("Dados da Lista"+  nomeLista);
             NoDuplo<T> aux = primeiroNo;
             while (aux != null){
-                System.out.printf("%s", aux.toString());
+                System.out.println(aux.toString());
                 aux = aux.getproximoNo();
             }
             System.out.println();
