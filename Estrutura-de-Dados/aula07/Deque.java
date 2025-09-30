@@ -4,5 +4,11 @@ public class Deque {
     private String nomeDeque;
     private int tamanho;
 
-    public 
+    public Deque(String nomeDeque) {
+        this.nomeDeque = nomeDeque;
+        this.tamanho = 0;
+        this.proximoNo = null;
+        this.anteriorNo = null;
+    }
+    
 }
